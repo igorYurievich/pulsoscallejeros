@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Teko:wght@500;600;700&display=swap');
+
+:root {
+  --display-font: 'Teko', sans-serif;
+  --body-font: 'Manrope', sans-serif;
+  font-family: var(--body-font);
+  line-height: 1.5;
+  font-weight: 400;
+  color: #f5f5f5;
+  background:
+    radial-gradient(circle at top center, rgba(255, 134, 74, 0.14), transparent 28%),
+    radial-gradient(circle at bottom right, rgba(103, 126, 255, 0.07), transparent 34%),
+    linear-gradient(180deg, #020407 0%, #070b10 32%, #0b1118 100%);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background: transparent;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+button,
+a {
+  font: inherit;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+}
+
+h1,
+h2,
+h3,
+.brand-mark {
+  font-family: var(--display-font);
+}
