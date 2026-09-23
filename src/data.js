@@ -37,4 +37,19 @@ export const translations = {
 
 export const countryCodes = { Argentina:'ar', Australia:'au', Austria:'at', Bulgaria:'bg', Brasil:'br', Canadá:'ca', China:'cn', Colombia:'co', 'Costa Rica':'cr', Croacia:'hr', Cuba:'cu', Chile:'cl', Dinamarca:'dk', España:'es', 'Estados Unidos':'us', Filipinas:'ph', Francia:'fr', Grecia:'gr', India:'in', Italia:'it', Japón:'jp', Mali:'ml', Marruecos:'ma', México:'mx', Noruega:'no', 'Países Bajos':'nl', Perú:'pe', Polonia:'pl', Portugal:'pt', 'Reino Unido':'gb', Rumanía:'ro', Rusia:'ru', Suecia:'se', Suiza:'ch', Turquía:'tr', Ucrania:'ua', Uruguay:'uy', Venezuela:'ve' }
 
-export const translatedRules = { en: rules.map((rule) => ({ title: rule.title, text: rule.text })), ru: rules.map((rule) => ({ title: rule.title, text: rule.text })) }
+export const translatedRules = {
+  en: [
+    { title: 'Separate rankings', text: 'Right and left arms are managed separately.' },
+    { title: 'Maximum 5 positions up', text: 'You can challenge up to 5 positions above you, not counting your own position.' },
+    { title: 'Advance notice', text: 'Give one week notice, or any day if both competitors agree.' },
+    { title: 'Format', text: 'Best of 5 (3 wins) or Best of 7 (4 wins), as agreed.' },
+    { title: 'Challenge result', text: 'The winner takes the rival’s position, the rival drops one place, and everyone below moves down one.' },
+  ],
+  ru: [
+    { title: 'Отдельные рейтинги', text: 'Рейтинги для правой и левой руки ведутся отдельно.' },
+    { title: 'Максимум 5 позиций вверх', text: 'Можно вызвать соперника максимум на 5 позиций выше, не считая свою позицию.' },
+    { title: 'Предупреждение заранее', text: 'Нужно предупредить за неделю или в любой день, если оба участника согласны.' },
+    { title: 'Формат', text: 'Best of 5 (3 победы) или Best of 7 (4 победы), по договорённости.' },
+    { title: 'Результат вызова', text: 'Победитель занимает место соперника, соперник опускается на одну позицию, а остальные сдвигаются вниз.' },
+  ],
+}

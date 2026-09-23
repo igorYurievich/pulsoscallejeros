@@ -148,6 +148,62 @@
   margin-bottom: 8px;
 }
 
+.language-options button {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  min-height: 38px;
+  padding: 0 10px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 5px;
+  background: rgba(255, 255, 255, 0.04);
+  color: rgba(255, 255, 255, 0.82);
+  cursor: pointer;
+  font: inherit;
+  font-size: 0.78rem;
+  text-align: left;
+  transition: border-color 0.2s ease, background 0.2s ease, color 0.2s ease;
+}
+
+.language-options button::before {
+  display: inline-block;
+  width: 22px;
+  height: 15px;
+  flex: 0 0 22px;
+  border-radius: 2px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-size: 1.05rem;
+  content: '';
+}
+
+.language-options button:nth-child(1)::before {
+  background-image: url('https://flagcdn.com/w40/es.png');
+}
+
+.language-options button:nth-child(2)::before {
+  background-image: url('https://flagcdn.com/w40/gb.png');
+}
+
+.language-options button:nth-child(3)::before {
+  background-image: url('https://flagcdn.com/w40/ru.png');
+}
+
+.language-options button:hover,
+.language-options button:focus-visible {
+  border-color: rgba(255, 179, 71, 0.55);
+  background: rgba(255, 179, 71, 0.12);
+  color: #ffca7a;
+  outline: none;
+}
+
+.language-options button.active {
+  border-color: rgba(255, 179, 71, 0.7);
+  background: rgba(255, 179, 71, 0.16);
+  color: #ffca7a;
+}
+
 .language-option {
   min-height: 32px;
   padding: 0 8px;
