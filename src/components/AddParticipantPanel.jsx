@@ -1,0 +1,9 @@
+import { useState } from 'react'
+import CountryInput from './CountryInput'
+
+export default function AddParticipantPanel({ rankings, countries, onAdd }) {
+  const defaultCountry = countries.find((country) => country.includes('España')) || countries[0] || ''
+  const [side, setSide] = useState('left'); const [name, setName] = useState(''); const [alias, setAlias] = useState(''); const [country, setCountry] = useState(defaultCountry); const [rank, setRank] = useState(''); const [status, setStatus] = useState('')
+  const submit = (event) => { event.preventDefault(); if (!name.trim()) return; onAdd({ side, name, alias, country, rank: Number(rank) || rankings[side].length + 1 }); setName(''); setAlias(''); setRank(''); setStatus('Participante añadido. Guarda los cambios.') }
+  return <form className="add-fighter-form add-fighter-section" onSubmit={submit}><strong>Añadir participante</strong><div className="toggle-group admin-toggle-group"><button type="button" className={`toggle admin-toggle ${side === 'left' ? 'active' : ''}`} onClick={() => setSide('left')}>Izquierda</button><button type="button" className={`toggle admin-toggle ${side === 'right' ? 'active' : ''}`} onClick={() => setSide('right')}>Derecha</button></div><input placeholder="Nombre" value={name} onChange={(e) => setName(e.target.value)} required /><input placeholder="Alias" value={alias} onChange={(e) => setAlias(e.target.value)} /><input type="number" min="1" placeholder="Posición" value={rank} onChange={(e) => setRank(e.target.value)} /><CountryInput countries={countries} value={country} label="País" onChange={setCountry} /><button type="submit" className="primary-btn">Añadir participante</button>{status ? <p className="save-status">{status}</p> : null}</form>
+}

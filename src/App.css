@@ -1431,6 +1431,53 @@ tbody tr.rank-blue > td {
   outline-offset: 1px;
 }
 
+.add-fighter-section {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  padding: 22px;
+  background: rgba(12, 14, 18, 0.82);
+  border: 1px solid rgba(255, 179, 71, 0.42);
+  border-radius: 8px;
+  box-shadow: 0 28px 50px rgba(0, 0, 0, 0.22);
+}
+
+.add-fighter-section strong {
+  padding-bottom: 4px;
+  border-bottom: 1px solid rgba(255, 179, 71, 0.22);
+  font-size: 0.9rem;
+}
+
+.add-fighter-section > label {
+  display: grid;
+  gap: 7px;
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 0.76rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.add-fighter-section > .admin-toggle-group,
+.add-fighter-section > .primary-btn {
+  grid-column: 1 / -1;
+}
+
+.add-fighter-section > .admin-toggle-group {
+  display: flex;
+  width: min(100%, 420px);
+  justify-self: start;
+}
+
+.add-fighter-section > .admin-toggle-group .admin-toggle {
+  flex: 1;
+  min-width: 0;
+}
+
+.add-fighter-section > .primary-btn {
+  width: 100%;
+  min-height: 48px;
+}
+
 .admin-table-wrap {
   overflow-x: auto;
   background: rgba(12, 14, 18, 0.82);
@@ -1653,6 +1700,15 @@ tbody tr.rank-blue > td {
 
 :root[data-theme='light'] .event-results-hint,
 :root[data-theme='light'] .event-results-grid label {
+  color: rgba(24, 32, 42, 0.7);
+}
+
+:root[data-theme='light'] .add-fighter-section {
+  background: rgba(255, 255, 255, 0.86);
+  border-color: rgba(191, 126, 29, 0.34);
+}
+
+:root[data-theme='light'] .add-fighter-section > label {
   color: rgba(24, 32, 42, 0.7);
 }
 
