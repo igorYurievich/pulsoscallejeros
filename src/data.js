@@ -21,7 +21,6 @@ export const futureEvents = [
 
 export const rules = [
   { title: 'Ranking separado', text: 'Brazo derecho y brazo izquierdo se gestionan por separado.' },
-  { title: 'Máximo 5 puestos arriba', text: 'Puedes desafiar como máximo 5 posiciones por encima, sin contar tu propia posición.' },
   { title: 'Aviso previo', text: 'Debe haber aviso con 1 semana de antelación, o cualquier día si ambos quieren disputar.' },
   { title: 'Formato', text: 'Best of 5 (3 wins) o Best of 7 (4 wins), según acordéis.' },
   { title: 'Resultado del desafío', text: 'El ganador toma el puesto del rival, el rival baja 1 posición y todos los de debajo bajan 1.' },
@@ -40,14 +39,12 @@ export const countryCodes = { Argentina:'ar', Australia:'au', Austria:'at', Bulg
 export const translatedRules = {
   en: [
     { title: 'Separate rankings', text: 'Right and left arms are managed separately.' },
-    { title: 'Maximum 5 positions up', text: 'You can challenge up to 5 positions above you, not counting your own position.' },
     { title: 'Advance notice', text: 'Give one week notice, or any day if both competitors agree.' },
     { title: 'Format', text: 'Best of 5 (3 wins) or Best of 7 (4 wins), as agreed.' },
     { title: 'Challenge result', text: 'The winner takes the rival’s position, the rival drops one place, and everyone below moves down one.' },
   ],
   ru: [
     { title: 'Отдельные рейтинги', text: 'Рейтинги для правой и левой руки ведутся отдельно.' },
-    { title: 'Максимум 5 позиций вверх', text: 'Можно вызвать соперника максимум на 5 позиций выше, не считая свою позицию.' },
     { title: 'Предупреждение заранее', text: 'Нужно предупредить за неделю или в любой день, если оба участника согласны.' },
     { title: 'Формат', text: 'Best of 5 (3 победы) или Best of 7 (4 победы), по договорённости.' },
     { title: 'Результат вызова', text: 'Победитель занимает место соперника, соперник опускается на одну позицию, а остальные сдвигаются вниз.' },
