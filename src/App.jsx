@@ -3,6 +3,7 @@ import { doc, getDoc, onSnapshot, serverTimestamp, setDoc, writeBatch } from 'fi
 import { db } from './firebase'
 import logoImage from '../logonotext.png'
 import './App.css'
+import './rankingCapture'
 import { countryCodes, futureEvents, historyEvents, initialCountries, leftHandRanking, rightHandRanking, rules, translatedRules, translations } from './data'
 import HistoryPage from './components/HistoryPage'
 import RulesPage from './components/RulesPage'
@@ -20,7 +21,7 @@ const rankClass = (rank) => rank === 1 ? 'rank-gold' : rank === 2 ? 'rank-silver
 const countryName = (value) => value.replace(/^[\p{Emoji_Presentation}\p{Extended_Pictographic}]+\s*/u, '')
 
 export default function App() {
-  const [activeSide, setActiveSide] = useState('left'); const [theme, setTheme] = useState(() => localStorage.getItem('pulsos-theme') || 'dark'); const [language, setLanguage] = useState(() => localStorage.getItem('pulsos-language') || 'es'); const [rankings, setRankings] = useState(cloneRankings); const [events, setEvents] = useState(historyEvents); const [scheduled, setScheduled] = useState(futureEvents); const [rankingRules, setRankingRules] = useState(rules); const [countries, setCountries] = useState(initialCountries); const [page, setPage] = useState(() => location.pathname.replace(/\/+$/, '') || '/'); const [settings, setSettings] = useState(false); const settingsRef = useRef(null)
+  const [activeSide, setActiveSide] = useState('left'); const [theme, setTheme] = useState(() => localStorage.getItem('pulsos-theme') || 'dark'); const [language, setLanguage] = useState(() => localStorage.getItem('pulsos-language') || 'es'); const [rankings, setRankings] = useState(cloneRankings); const [events, setEvents] = useState(historyEvents); const [scheduled, setScheduled] = useState(futureEvents); const [rankingRules, setRankingRules] = useState(rules); const [countries, setCountries] = useState(initialCountries); const [page, setPage] = useState(() => location.pathname.replace(/\/+$/, '') || '/'); const [settings, setSettings] = useState(false); const [showRankingCapture, setShowRankingCapture] = useState(false); const settingsRef = useRef(null)
   const copy = translations[language]; const ranking = rankings[activeSide]; const publicRules = language === 'es' ? rankingRules : translatedRules[language]
   useEffect(() => { localStorage.setItem('pulsos-theme', theme); document.documentElement.dataset.theme = theme }, [theme]); useEffect(() => localStorage.setItem('pulsos-language', language), [language])
   useEffect(() => { const change = () => setPage(location.pathname.replace(/\/+$/, '') || '/'); addEventListener('popstate', change); return () => removeEventListener('popstate', change) }, [])
